@@ -16,9 +16,9 @@ void imprimirVetor (int* A, int n) {
 }
 
 void MaxMin1(int A[], int n, int &Max, int &Min) {
-    Max = A[1];
-    Min = A[1];
-    for (int i = 1; i < n; ++i) {
+    Max = A[0];
+    Min = A[0];
+    for (int i = 0; i < n; ++i) {
         if (A[i] > Max) {
             Max = A[i];
         }
@@ -29,9 +29,9 @@ void MaxMin1(int A[], int n, int &Max, int &Min) {
 }
 
 void MaxMin2(int A[], int n, int &Max, int &Min) {
-    Max = A[1];
-    Min = A[1];
-    for (int i = 1; i < n; i++) {
+    Max = A[0];
+    Min = A[0];
+    for (int i = 0; i < n; i++) {
         if (A[i] > Max) {
             Max = A[i];
         } else if (A[i] < Min) {
@@ -41,7 +41,7 @@ void MaxMin2(int A[], int n, int &Max, int &Min) {
 }
 
 void MaxMin3(int A[], int n, int &Max, int &Min) {
-    int i, FimDoAnel;
+    int i, FimDoAnel = 0;
 
     if (n % 2 > 0) {
         A[n + 1] = A[n];
@@ -50,12 +50,12 @@ void MaxMin3(int A[], int n, int &Max, int &Min) {
         FimDoAnel = n - 1;
     }
 
-    if (A[1] > A[2]) {
-        Max = A[1];
-        Min = A[2];
-    } else {
-        Max = A[2];
+    if (A[0] > A[1]) {
+        Max = A[0];
         Min = A[1];
+    } else {
+        Max = A[1];
+        Min = A[0];
     }
 
     i = 3;
@@ -81,6 +81,7 @@ void MaxMin3(int A[], int n, int &Max, int &Min) {
 int compare(const void * a, const void * b) {
     return (*(int*)a - *(int*)b);
 }
+
 void execucao(std::ofstream& file) {
     int n;
     int Max, Min;
@@ -135,6 +136,8 @@ void execucao(std::ofstream& file) {
                     } else if(j == 2) {
                         ordem = "Decrescente";
                     }
+
+                // file << n << "," << ordem << "," << k+1 << "," << tempoExecMedio << "\n";
                 }
                 
                 tempoExecMedio = tempoExecMedio / 10;

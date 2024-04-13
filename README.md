@@ -1,4 +1,4 @@
-#  🎮 MinMax
+#  🎮 MinMax - Análise Assintótica
 
 <div align="center">
    <img align="center" height="20px" width="80px" src="https://img.shields.io/badge/Ubuntu-orange?logo=ubuntu">
@@ -10,18 +10,18 @@
 <details>
   <summary>📌 Tópicos</summary>
     <ol>
-        <li><a href="#-introduçao">Introdução</a></li>
-        <li><a href="#-analise-assintotica">Análise Assintótica</a></li>
-        <li><a href="#-implementacao">Implementação</a></li>
+        <li><a href="#-introdução">Introdução</a></li>
+        <li><a href="#-análise-assintótica">Análise Assintótica</a></li>
+        <li><a href="#-implementação">Implementação</a></li>
         <li><a href="#-estrutura-de-diretorios">Estrutura de Diretórios</a></li>
         <li><a href="#-como-usar">Como Usar</a></li>
         <li><a href="#-exemplos">Exemplos</a></li>
-        <li><a href="#-resultados-das-analises">Resultados Das Análises</a></li>
-        <li><a href="#-conclusao">Conclusão</a></li>
-        <li><a href="#-ambiente-de-compilacao">Ambiente de Compilação</a></li>
+        <li><a href="#-resultados-das-análises">Resultados Das Análises</a></li>
+        <li><a href="#-conclusão">Conclusão</a></li>
+        <li><a href="#-ambiente-de-compilação">Ambiente de Compilação</a></li>
         <li><a href="#-makefile">MakeFile</a></li>
         <li><a href="#-contato">Contato</a></li>
-        <li><a href="#-referencias">Referências</a></li>
+        <li><a href="#-referências">Referências</a></li>
     </ol>
 </details>
 
@@ -68,36 +68,36 @@ Isso descreve o limite superior do comportamento de uma função. Em termos simp
 
 <p align="center">
     <b>0≤f(n)≤c∗g(n),∀n≥n0</b>
-</p>
 
 <figure align="center">
   <img src="./images/imgs_readme/notacaoO.jpeg" alt="Gráfico Exemplo" width="500" >
   <figcaption>Fonte: Autor</figcaption>
 </figure>
+</p>
 
 #### 📍 Notação Ω (Big Omega)
 Essa notação descreve o limite inferior do comportamento de uma função. Representa o melhor cenário possível. Se f(n) é Ω(g(n)), isso significa que, para valores suficientemente grandes de n, f(n) nunca crescerá mais lentamente do que uma constante múltipla de g(n).
 
 <p align="center">
     <b>0≤c∗g(n)≤f(n),∀n≥n0</b>
-</p>
 
 <figure align="center">
   <img src="./images/imgs_readme/notacaoOmega.jpeg" alt="Gráfico Exemplo" width="500" >
   <figcaption>Fonte: Autor</figcaption>
 </figure>
+</p>
 
 #### 📍 Notação Θ (Big Theta)
 Esta notação descreve o comportamento exato de uma função. Se f(n) é Θ(g(n)), isso significa que f(n) cresce na mesma taxa que g(n) à medida que n tende ao infinito. Em outras palavras, f(n) é limitada superior e inferiormente por uma constante múltipla de g(n).
 
 <p align="center">
     <b>0≤c1∗g(n)≤f(n)≤c2∗g(n),∀n≥n0</b>
-</p>
 
 <figure align="center">
   <img src="./images/imgs_readme/notacaoTheta.jpeg" alt="Gráfico Exemplo" width="500" >
   <figcaption>Fonte: Autor</figcaption>
 </figure>
+</p>
 
 
 ### 🚀 Aplicação da Análise Assintótica
@@ -134,7 +134,10 @@ Os algoritmos `MaxMin1`, `MaxMin2` e `MaxMin3` são implementados para resolver 
                 Max = A[i];
             } else if (A[i] < Min) {
                 Min = A[i];
-            }
+            }    <figure align="center">
+    <img src="./images/imgs_readme/graficoExemploMedias.png" alt="Gráfico Exemplo" width="500" >
+    <figcaption>Fonte: Autor</figcaption>
+    </figure>
         }
     }   
 ```
@@ -685,21 +688,23 @@ Os arquivos de entradas vc pode está pegando de exemplos os que estão disponí
 ### 📄 Exemplo de Saída de um dos Gráficos:
 1. **Primeiro tipo de plotagem:** 
 A partir do script `plotGaficoMedias.gp` são plotados 12 gráficos, cada um pegando a diferença entre o tempo de execução dos três MaxMin. Aqui está um exemplo de um dos gráficos gerados a partir dos dados do arquivo `resultadosMedias.csv`: 
-
-<figure align="center">
-  <img src="./images/imgs_readme/graficoExemploMedias.png" alt="Gráfico Exemplo" width="500" >
-  <figcaption>Fonte: Autor</figcaption>
-</figure>
+<p align="center">
+    <figure align="center">
+    <img src="./images/imgs_readme/graficoExemploMedias.png" alt="Gráfico Exemplo" width="500" >
+    <figcaption>Fonte: Autor</figcaption>
+    </figure>
+</p>
 
 **OBSERVAÇÃO:** Foram plotados um total de 12 gráficos, representando diferentes tamanhos de vetores e organizações, mostrando a variação do tempo de execução de acordo com o MinMax usado.
 
 2. **Segundo tipo de plotagem:** 
 A partir do script `plotGaficoMinMax.gp` são plotados 9 gráficos, cada um pegando a diferença entre o tempo de execução de acordo com o tamanho do vetor. Aqui está um exemplo de um dos gráficos gerados a partir dos dados do arquivo `resultadosMiinMaxMedias.csv`: 
-
-<figure align="center">
-   <img src="./images/imgs_readme/graficoExemploMinMax.png" alt="Gráfico Exemplo" width="500" >
-  <figcaption>Fonte: Autor</figcaption>
-</figure>
+<p align="center">
+    <figure align="center">
+    <img src="./images/imgs_readme/graficoExemploMinMax.png" alt="Gráfico Exemplo" width="500" >
+    <figcaption>Fonte: Autor</figcaption>
+    </figure>
+</p>
 
 **OBSERVAÇÃO:** Foram plotados um total de 9 gráficos, representando diferentes organizações e MinMaxs usados, mostrando a variação do tempo de execução de acordo com o tamanho do vetor.
 
@@ -727,11 +732,12 @@ Analisamos o desempenho de três diferentes implementações de algoritmos MinMa
 - **Melhor, Pior e Caso Médio:** Neste algoritmo, os elementos são avaliados em pares, resultando em \( \frac{n}{2} \) comparações. O maior elemento é obtido pelo primeiro "if" com um custo de \( (n / 2) - 1 \) comparações, enquanto o menor é obtido pelo segundo "if" com um custo de \( (n / 2) - 1 \) comparações. Portanto, o custo total é \( f(n) = (n / 2) + (n - 2) / 2 + (n - 2) / 2 = (3n / 2) - 2 \).
 
 Observe a imagem abaixo, onde mostra exatamente isso que acabamos de discutir: 
-
-<figure align="center">
-   <img src="./images/imgs_readme/casosMinmaxs.jpeg" alt="Gráfico Exemplo" width="500" >
-  <figcaption>Fonte: Autor</figcaption>
-</figure>
+<p align="center">
+    <figure align="center">
+    <img src="./images/imgs_readme/casosMinmaxs.jpeg" alt="Gráfico Exemplo" width="500" >
+    <figcaption>Fonte: Autor</figcaption>
+    </figure>
+</p>
 
 
 ### 📊 Visualizando a teoria na prática
@@ -743,11 +749,12 @@ Foi possível ver nos gráficos gerados pelo script `plotGraficoMedias.gp`o anda
 Uma das coisas observadas foi que apesar da análise teórica indicar um custo de (3n / 2) - 2 para o algoritmo MinMax3 em todos os casos, ele parece apresentar um desempenho inferior em comparação com os outros algoritmos, especialmente quando os dados são aleatórios.
 
 **Exemplo de Análise:** Olhando para o seguinte gráfico de umas das execuções podemos ver isso acontecendo: 
-
-<figure align="center">
-   <img src="./images/imgs_readme/graficoMedia500000.png" alt="Gráfico Exemplo" width="500" >
-  <figcaption>Fonte: Autor</figcaption>
-</figure>
+<p align="center">
+    <figure align="center">
+    <img src="./images/imgs_readme/graficoMedia500000.png" alt="Gráfico Exemplo" width="500" >
+    <figcaption>Fonte: Autor</figcaption>
+    </figure>
+</p>
 
 Usando dados aleatórios: 
 - *Algoritmo MaxMin1:* f(n) = 2(n - 1)
@@ -769,11 +776,12 @@ Embora a análise teórica forneça uma estimativa do desempenho dos algoritmos,
 Agora, quando analisamos os gráficos gerados pelo script `plotGraficosMinMax.gp`, vemos de uma outra maneira as aplicações das análises que nós fizemos. Lá mostra individualmente o desencolcimento de cada algoritmo MinMax. Percebemos que todos crescem de forma linar como nas nossa conclusões teóricas, mesmo que os gráficos não geram uma linha perfeita, até porque eles são plotados pela médias de várias execuções, no entanto temos que considerar também as margens de erros e situações diferentes de cada execução. 
 
 **Exemplo de Análise:** Olhando para o seguinte gráfico de umas das execuções podemos ver isso acontecendo: 
-
-<figure align="center">
-   <img src="./images/imgs_readme/graficoMinMax3.png" alt="Gráfico Exemplo" width="500" >
-  <figcaption>Fonte: Autor</figcaption>
-</figure>
+<p align="center">
+    <figure align="center">
+    <img src="./images/imgs_readme/graficoMinMax3.png" alt="Gráfico Exemplo" width="500" >
+    <figcaption>Fonte: Autor</figcaption>
+    </figure>
+</p>
 
 ##### 🤔 **Possíveis Explicações:**
 
@@ -786,7 +794,7 @@ Portanto, ao interpretar os gráficos e analisar o desempenho dos algoritmos, é
 ## 🎉 Conclusão 
 Neste trabalho, foi explorado os algoritmos de MinMax teoricamente e experimentalmente. Enquanto as análises teóricas forneceram previsões úteis, os resultados práticos destacaram diferenças significativas. Observamos que o desempenho dos algoritmos foi influenciado por variações nos dados de entrada e outros fatores práticos. Essas descobertas destacam a importância de uma abordagem integrada ao estudar algoritmos, combinando análises teóricas com experimentos práticos para uma compreensão mais completa de seu comportamento.
 
-## 🛠️ Ambiente de Compilação
+## 🔨 Ambiente de Compilação
 
 A seguir estão os detalhes do ambiente de compilação onde o programa foi executado:
 
